@@ -2,7 +2,7 @@
 
 
 def test_ya_simple():
-    assert 2 == 2
+    assert 3 == 3
 
     # driver = WebDriver(executable_path='C://selenium//chromedriver.exe')
     #
