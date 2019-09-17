@@ -11,7 +11,7 @@ services:
   - docker
 
 before_install:
-  - docker pull selenium/node-chrome:3.141.59-vanadium
-  - docker pull selenium/hub:3.141.59-vanadium
-  - docker run -d -p 4444:4444 --name selenium-hub selenium/hub:3.141.59-vanadium
-  - docker run -d --link selenium-hub:hub --name selenium-node-chrome -v /dev/shm:/dev/shm selenium/node-chrome:3.141.59-vanadium
+  - docker pull selenium/hub selenium/node-chrome selenium/node-firefox
+  - docker run -p 4444:4444 --name selenium-hub selenium/hub
+  - docker run --link selenium-hub:hub selenium/node-chrome
+  - docker run --link selenium-hub:hub selenium/node-firefox
