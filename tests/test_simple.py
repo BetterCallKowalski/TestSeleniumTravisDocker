@@ -21,6 +21,6 @@ def test_google_simple():
         desired_capabilities=DesiredCapabilities.CHROME)
 
     chrome.get('https://google.com')
-    assert chrome.title == 'Google'
+    assert chrome.title == 'Goagle'
 
     chrome.quit()
