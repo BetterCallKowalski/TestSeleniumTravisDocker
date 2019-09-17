@@ -12,8 +12,6 @@ services:
 
 before_install:
   - docker pull selenium/hub
-  - docker pull selenium/node-chrome
   - docker pull selenium/node-firefox
   - docker run -p 4444:4444 --name selenium-hub selenium/hub
-  - docker run --link selenium-hub:hub selenium/node-chrome
   - docker run --link selenium-hub:hub selenium/node-firefox
